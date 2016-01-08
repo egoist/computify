@@ -7,8 +7,8 @@ module.exports = function (str) {
 	var evalIsNotEvil = eval
 	var unitRe = /[a-zA-Z]+/
 	var stripRe = /[^\d\+\-\*\/\%]/g
-	var fineUnits = str.match(unitRe)
-	var unit = fineUnits && fineUnits[0]
+	var findUnits = str.match(unitRe)
+	var unit = findUnits && findUnits[0]
 	if (unit) {
 		var stripedStr = str.replace(stripRe, '')
 		return evalIsNotEvil(stripedStr) + unit
