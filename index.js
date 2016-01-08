@@ -6,7 +6,7 @@ module.exports = function (str) {
 	// it won't be as evil as you have heard
 	var evalIsNotEvil = eval
 	var unitRe = /[a-zA-Z]+/
-	var stripRe = /[^\d\+\-\*\/\%]/g
+	var stripRe = /[^\d\+\-\*\/\%\.]/g
 	var findUnits = str.match(unitRe)
 	var unit = findUnits && findUnits[0]
 	if (unit) {
