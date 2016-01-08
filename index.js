@@ -9,8 +9,8 @@ module.exports = function (str) {
 	var stripRe = /[^\d\+\-\*\/\%]/g
 	var fineUnits = str.match(unitRe)
 	var unit = fineUnits && fineUnits[0]
-	var stripedStr = str.replace(stripRe, '')
 	if (unit) {
+		var stripedStr = str.replace(stripRe, '')
 		return evalIsNotEvil(stripedStr) + unit
 	}
 	return evalIsNotEvil(str)
